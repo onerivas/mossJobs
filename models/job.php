@@ -24,8 +24,9 @@ Class Job {
 }
 Class Jobs {
   static function create($job){
-    $query = "INSERT INTO listings (job_title, description, location, company, qualifications) VALUES ($1, $2, $3, $4, $5, $6, $7)";
-    pg_query_params($query, [$job->job_title, $job->company, $job->description, $job->location, $job->qualification, $job->salary, $job->link]);
+    $query = "INSERT INTO listings (job_title, company, description, location, qualification, salary, link) VALUES ($1, $2, $3, $4, $5, $6, $7)";
+    $query_params = array($job->job_title, $job->company, $job->description, $job->location, $job->qualification, $job->salary, $job->link);
+    pg_query_params($query, $query_params);
     return self::all();
   }
   static function all(){
