@@ -97,29 +97,34 @@ componentDidMount = () => {
    return <div>
    <Create createCallback={this.updateJob}></Create>
 
-  <span className="search-jobs"><h2> Job Listings.</h2></span>
+  <span className="search-jobs"><h2> Job Search.</h2></span>
   <h2>Listings</h2>
+
     <ul>
+
     {
       this.state.jobs.map(
         (jobs)=>{
-          return <li>
-        {jobs.job_title}<br/>
-        {jobs.company}<br/>
-        {jobs.description}<br/>
-        {jobs.location}<br/>
-        {jobs.qualification}<br/>
-        {jobs.salary}<br/>
-        <a href={jobs.link}>Click</a><br/>
+          return <div className="row">
+          <div className="card #fbe9e7 deep-orange lighten-5">
+          <div className="card-content">
+        <h4>{jobs.job_title}</h4>
+        <h5>{jobs.company}</h5><br/>
+        Job Description: {jobs.description}<br/>
+        Location: {jobs.location}<br/>
+        Qualifications: {jobs.qualification}<br/>
+        Salary: {jobs.salary}<br/>
+      <div className="card-action">  <a href={jobs.link}>Click</a><br/> </div>
 
         {/* DELETE */}
 
-        <button value={jobs.id} onClick={this.deleteJob}>
+      <div className="card-action">  <button value={jobs.id} onClick={this.deleteJob}>
           DELETE
         </button>
+      </div>
 
         {/* UPDATE */}
-
+      <div className="card-action">
         <details>
         <summary>Edit</summary>
         <form id={jobs.id} onSubmit={this.editJobs}>
@@ -133,10 +138,13 @@ componentDidMount = () => {
           <input type="submit" value="Update Listing"/>
         </form>
         </details>
+        </div>
+        </div>
+        </div>
+        </div>
 
-        </li>
+
         }
-
       )
     }
     </ul>
