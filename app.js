@@ -96,7 +96,9 @@ componentDidMount = () => {
  render = () => {
    return <div>
    <Create createCallback={this.updateJob}></Create>
-    <h2> List of Jobs </h2>
+
+  <span className="search-jobs"><h2> Job Listings.</h2></span>
+  <h2>Listings</h2>
     <ul>
     {
       this.state.jobs.map(
