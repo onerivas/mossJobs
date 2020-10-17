@@ -58,7 +58,9 @@ class Create extends React.Component{
   render = () => {
     console.log(this.props);
     return <div>
+
     <h2>Add a New Job Listing</h2>
+    <div className="create-form">
     <form onSubmit={this.createJob}>
       <input onKeyUp={this.changeNewJobTitle} type="text" placeholder="Job Title"/><br/>
       <input onKeyUp={this.changeNewJobCompany} type="text" placeholder="Company"/><br/>
@@ -69,6 +71,7 @@ class Create extends React.Component{
       <input onKeyUp={this.changeNewJobLink} type="text" placeholder="Link to Application"/><br/>
       <input type="submit" value="Create Listing"/>
     </form>
+    </div>
   </div>
   }
 }
