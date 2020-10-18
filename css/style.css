@@ -20,7 +20,7 @@ body{
   background-position: center center;
   background-size: cover;
   max-width: 1280px;
-  height: 300px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,14 +32,39 @@ body{
 .header-image h1{
   font-family: 'Passion One', cursive;
   position: relative;
-  font-size: 12em;
+  font-size: 10em;
   margin-top: 0;
   display: flex;
   padding-left: 40%;
   padding-top: 230px;
   position: absolute;
   /* text-shadow: 3px 3px #CFD0CB; */
-  color: white;
+  color: whitesmoke;
+  -webkit-text-stroke: 2px #A8AA9C;
+}
+
+.center{
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+}
+
+ion-icon {
+    font-size: 100px;
+    color: #A8AA9C;
+}
+
+.createForm{
+  text-align: center;
+  display: block;
+}
+
+.create-image, .create-form{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.create-image{
+  margin-top: 100px;
 }
 
 .row{
@@ -50,10 +75,12 @@ body{
 .col{
   display: flex;
   justify-content: space-evenly;
-  padding: 50px;
+  padding: 20px;
+  font-size: 15px;
+  /* width: 200px; */
 }
 
-.create-image{
+/* .create-image{
   background-image: url('https://i.ibb.co/bNcbrFh/add-image.jpg');
   background-repeat: no-repeat;
   background-position: center center;
@@ -65,7 +92,7 @@ body{
   justify-content: center;
   padding: 2em;
   box-sizing: border-box;
-}
+} */
 
 main h2{
   font-size: 2em;
@@ -94,14 +121,18 @@ main form{
 }
 
 span h2{
-  margin-top: 70px;
+  margin-top: 20px;
+  font-size: 5em;
+  font-family: 'Passion One', cursive;
+  opacity: 0.3;
 }
 
 .row{
   font-size: 20px;
-  display: inline-block;
+  display: flex;
+  justify-content: inline-block;
   color: #1D1D1D;
-  text-align: justify;
+  /* text-align: center; */
   padding: 20px;
 }
 
@@ -119,14 +150,23 @@ span h2{
   margin: 0;
 }
 
+.title{
+  font-family: 'Oswald', sans-serif;
+}
+
+.listings{
+  font-family: 'Oswald', sans-serif;
+  font-size: 3em;
+}
+
 .card{
-  align-items: center;
+  text-align: left;
 
   display: flex;
   flex-direction: row;
-  width: 90%;
-  /* display: inline-block; */
-  justify-content: center;
+  width: 100%;
+  display: inline-block;
+  /* justify-content: center; */
 }
 .card-content{
   background: #f2e8e7;
