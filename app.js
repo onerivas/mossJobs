@@ -106,7 +106,7 @@ componentDidMount = () => {
   </div>
 
   <span className="search-jobs"><h2> Job Search.</h2></span>
-  <h2 className="listings">Listings:</h2>
+
 
     <ul>
 

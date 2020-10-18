@@ -178,6 +178,10 @@ details summary::-webkit-details-marker {
 details:hover{
   cursor: default;
 }
+.btn{
+  background-color: #A8AA9C !important;
+}
+
 .delBtn{
   background-color: whitesmoke;
 }
