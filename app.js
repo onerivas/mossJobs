@@ -95,8 +95,10 @@ componentDidMount = () => {
 
  render = () => {
    return <div>
+   <details>
+   <summary>Add a New Job Listing</summary>
    <Create createCallback={this.updateJob}></Create>
-
+   </details>
   <span className="search-jobs"><h2> Job Search.</h2></span>
   <h2>Listings</h2>
 
@@ -106,22 +108,16 @@ componentDidMount = () => {
       this.state.jobs.map(
         (jobs)=>{
           return <div className="row">
-          <div className="card #fbe9e7 deep-orange lighten-5">
+          <div className="card ">
           <div className="card-content">
         <h4>{jobs.job_title}</h4>
         <h5>{jobs.company}</h5><br/>
-        Job Description: {jobs.description}<br/>
+        <p className="jobDes">Job Description: {jobs.description}<br/>
         Location: {jobs.location}<br/>
         Qualifications: {jobs.qualification}<br/>
         Salary: {jobs.salary}<br/>
-      <div className="card-action">  <a href={jobs.link}>Click</a><br/> </div>
-
-        {/* DELETE */}
-
-      <div className="card-action">  <button value={jobs.id} onClick={this.deleteJob}>
-          DELETE
-        </button>
-      </div>
+        </p>
+      <div className="card-action">  <a href={jobs.link}>Apply Here</a><br/> </div>
 
         {/* UPDATE */}
       <div className="card-action">
@@ -135,7 +131,11 @@ componentDidMount = () => {
           <input onKeyUp={this.changeEditJobQualification} type="text" placeholder="Qualifications"/><br/>
           <input onKeyUp={this.changeEditJobSalary} type="text" placeholder="$ Salary"/><br/>
           <input onKeyUp={this.changeEditJobLink} type="text" placeholder="Link to Application"/><br/>
-          <input type="submit" value="Update Listing"/>
+          <input className='btn' type="submit" value="Update Listing"/>
+          <br/>
+          <button className='delBtn btn' value={jobs.id} onClick={this.deleteJob}>
+          DELETE
+          </button>
         </form>
         </details>
         </div>

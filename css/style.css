@@ -17,8 +17,10 @@ body{
 .header-image{
   background-image: url('https://i.ibb.co/Jybr03X/header-moss.jpg');
   background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   max-width: 1280px;
-  height: 600px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,14 +30,16 @@ body{
 }
 
 .header-image h1{
-  font-size: 6em;
+  font-family: 'Passion One', cursive;
+  position: relative;
+  font-size: 12em;
   margin-top: 0;
   display: flex;
-  padding-left: 500px;
-  padding-top: 450px;
+  padding-left: 40%;
+  padding-top: 230px;
   position: absolute;
-  text-shadow: 3px 3px #CFD0CB;
-  color:#949D8A;
+  /* text-shadow: 3px 3px #CFD0CB; */
+  color: white;
 }
 
 .row{
@@ -52,6 +56,8 @@ body{
 .create-image{
   background-image: url('https://i.ibb.co/bNcbrFh/add-image.jpg');
   background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   max-width: 1280px;
   height: 300px;
   display: flex;
@@ -74,6 +80,8 @@ main form{
 .search-jobs{
   background-image: url('https://i.ibb.co/tZ8WKzC/search-jobs.jpg');
   background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   max-width: 1280px;
   height: 300px;
   display: flex;
@@ -98,8 +106,8 @@ span h2{
 }
 
 .row h4{
-  background-color:white;
-  padding: 10px;
+  /* background-color:white; */
+  padding-bottom: 10px;
   width: 500px;
   text-align: center;
   display: inline;
@@ -107,24 +115,44 @@ span h2{
 }
 
 .row h5{
-  padding: 10px;
+  /* padding: 10px; */
+  margin: 0;
 }
 
 .card{
   align-items: center;
-  margin-right: 10px;
+
   display: flex;
   flex-direction: row;
-  width: 1280px;
-  display: inline-block;
+  width: 90%;
+  /* display: inline-block; */
+  justify-content: center;
 }
-
+.card-content{
+  background: #f2e8e7;
+  margin-right: 0;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details:hover{
+  cursor: default;
+}
+.delBtn{
+  background-color: whitesmoke;
+}
+.delBtn:hover {
+  background-color: whitesmoke;
+  filter: brightness(90%);
+}
 footer{
   padding: 30px;
   background-color: whitesmoke;
   box-shadow: 0px 1px 1px 1px gray;
   margin-bottom: 10px;
 }
+
+
 
 @media only screen and (min-width: 601px) {
   .main-div {
