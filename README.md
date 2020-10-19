@@ -1,5 +1,4 @@
 # mossJobs
-
 #### Created by Alison Carnes, and Juan Carlos Rivas
 
 #### Technologies used
